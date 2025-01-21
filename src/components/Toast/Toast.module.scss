@@ -1,0 +1,100 @@
+@use "../../sass/variables" as *;
+
+#toastContainer {
+    position: relative;
+}
+
+.toast-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+}
+
+.toast {
+    z-index: 15;
+    width: 15rem;
+    gap: .25rem;
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    animation: toast-aparition 0.2s ease;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    &__message, &__content {
+        margin: 0;
+    }
+
+    &__progress-bar {
+        position: absolute;
+        bottom: 8px;
+        left: 2rem;
+        right: 2rem;
+        height: 4px;
+        background-color: #d2d2d2;
+        overflow: hidden;
+    }
+
+    &__progress-bar::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        will-change: scale;
+        animation: toast-progress-bar 1.5s linear;
+        transform-origin: left;
+    }
+
+    &__progress-bar--success::after {
+        background-color: $color-primary;
+    }
+
+    &__progress-bar--error::after {
+        background-color: #ff3700;
+    }
+
+    &__progress-bar--infos::after {
+        background-color: #0077ff;
+    }
+
+    &__progress-bar--warning::after {
+        background-color: #ffdd00;
+    }
+
+    &--desapear {
+        opacity: 0;
+    }
+}
+
+@media (max-width: $mobile-screen) {
+    .toast-container {
+        left: 1rem;
+    }
+    .toast {
+        width: 100%;
+    }
+}
+
+@keyframes toast-progress-bar {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes toast-aparition {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,6 @@
+@use "../../sass/variables" as *;
+
+.board-view {
+    display: inline;
+    background-color: $color-background;
+}

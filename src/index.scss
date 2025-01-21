@@ -1,0 +1,15 @@
+@use "./sass/reset";
+@use "./components/Navbar/Navbar.module.scss";
+@use "./components/Hero/Hero.module.scss";
+@use "./components/Features/Feature.module.scss";
+@use "./components/Footer/Footer.scss";
+@use "./components/FormInput/FormInput.module.scss";
+@use "./components/LoginForm/LoginForm.module.scss";
+@use "./components/IconLink/IconLink.module.scss";
+@use "./components/BoardHeader/BoardHeader.module.scss";
+@use "./components/ProfileEdition/ProfileEdition.module.scss";
+@use "./components/AccountList/AccountList.module.scss";
+@use "./components/Toast/Toast.module.scss";
+@use "./components/MobileNav/MobileNav.module.scss";
+
+@use "./views/Board/Board.module.scss";

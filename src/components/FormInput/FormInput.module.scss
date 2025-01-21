@@ -1,0 +1,29 @@
+.form-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__input {
+        padding: 5px;
+        font-size: 1.2rem;
+    }
+
+    &__input::placeholder {
+        color: #aeaeae;
+    }
+
+    &__label {
+        font-weight: bold;
+    }
+
+    &--checkbox {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+
+        & > .form-input__label {
+            font-weight: 100;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.mobile-nav-button {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 5;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+    & img {
+        $icon-size: 1.75rem;
+        width: $icon-size;
+        height: $icon-size;
+        color: #fff;
+    }
+}
+
+.mobile-nav-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #22143642;
+
+    &__content {
+        background-color: #fff;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        animation: come-from-bottom 0.2s ease-in-out;
+    }
+
+    &__content--hide-animation {
+        animation: go-to-bottom 0.2s ease-in-out;
+    }
+
+    &__content > a {
+        padding: 1.25rem 1.5rem;
+        width: 100%;
+        border-bottom: solid 1px #d1d1d1;
+    }
+
+    &__content > a:last-of-type > span {
+        color: #ff3700;
+    }
+}
+
+@keyframes come-from-bottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes go-to-bottom {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}

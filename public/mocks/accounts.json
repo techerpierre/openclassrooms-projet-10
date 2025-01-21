@@ -1,0 +1,28 @@
+[
+  {
+    "type": "Checking",
+    "number": "x8349",
+    "currency": "USD",
+    "balance": {
+      "total": 2082.79,
+      "available": 2082.79
+    }
+  },
+  {
+    "type": "Savings",
+    "number": "x6712",
+    "currency": "USD",
+    "balance": {
+      "total": 10928.42,
+      "available": 10928.42
+    }
+  },
+  {
+    "type": "Credit Card",
+    "number": "x8349",
+    "currency": "USD",
+    "balance": {
+      "current": 184.30
+    }
+  }
+]
