@@ -1,4 +1,4 @@
-import { canShowLogout, isMobileScreen } from "../../helpers/functions";
+import { canShowLogout } from "../../helpers/functions";
 import { useAuth } from "../../store/hooks/authHooks"
 import IconLink from "../IconLink/IconLink";
 import { useToast } from "../Toast/ToastContext";

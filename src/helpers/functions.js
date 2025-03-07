@@ -1,3 +1,5 @@
+import * as jwt from "jsonwebtoken";
+
 export function getToken() {
     return localStorage.getItem("token") || sessionStorage.getItem("token")
 }
@@ -15,8 +17,8 @@ export function deleteToken() {
 export function isAuthenticated() {
     const token = getToken();
     if (!token) return false;
-    //return jwt.decode(token).exp < Date.now();
-    return Boolean(token);
+    return jwt.decode(token).exp < Date.now();
+    //return Boolean(token);
 }
 
 export function getCurrencySymbol(currency) {
