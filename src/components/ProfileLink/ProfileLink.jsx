@@ -10,7 +10,7 @@ const ProfileLink = () => {
         to={isAuthenticated ? "/board" : "/login" }
         src="/img/person-circle.svg"
         alt="Profile icon"
-    >{ isAuthenticated ? currentProfile?.email : "Sign In" }</IconLink>
+    >{ isAuthenticated ? currentProfile?.userName : "Sign In" }</IconLink>
 }
 
 export default ProfileLink
